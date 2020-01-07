@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Adrian</string>
+    <string name="appwidget_text">Profesor</string>
+    <string name="add_widget">Add widget</string>
+</resources>
