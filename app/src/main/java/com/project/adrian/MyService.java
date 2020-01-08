@@ -109,6 +109,16 @@ public class MyService extends Service {
                             remoteViews.setTextViewText(R.id.appwidget_course, "Descanso");
                             appWidgetManager.updateAppWidget(thisWidget, remoteViews);
                         }
+                        if (target.isBefore(LocalTime.parse("14:59")) && target.isAfter(LocalTime.parse("00:00"))) {
+                            remoteViews.setTextViewText(R.id.appwidget_text, "Casa");
+                            remoteViews.setTextViewText(R.id.appwidget_course, "Casa");
+                            appWidgetManager.updateAppWidget(thisWidget, remoteViews);
+                        }
+                        if (target.isBefore(LocalTime.parse("23:59")) && target.isAfter(LocalTime.parse("21:21"))) {
+                            remoteViews.setTextViewText(R.id.appwidget_text, "Casa");
+                            remoteViews.setTextViewText(R.id.appwidget_course, "Casa");
+                            appWidgetManager.updateAppWidget(thisWidget, remoteViews);
+                        }
                     }
                     dh = obj.getData(startTime, days[da - 1]);
                     for (int i = 0; i < dh.size(); i++) {
